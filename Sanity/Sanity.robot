@@ -18,3 +18,10 @@ Verify Left Nav contains Links
     wait until page contains  Destinations
     wait until page contains  Vacations
     close browser
+
+Verify "Register Page" is accessible
+    open browser  http://newtours.demoaut.com/  chrome
+    click element  xpath=//a[contains(text(),'Register')]
+    wait until page contains  To create your account
+    page should contain element  xpath=//input[contains(@src,'submit')]
+    close browser
